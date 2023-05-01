@@ -1,0 +1,418 @@
+<!DOCTYPE  html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/dist/output.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap"
+		rel="stylesheet">
+	<script src="./js/script.js" defer></script>
+	<title>home&living</title>
+</head>
+
+<body>
+	<div class="bg-black text-slate-300 flex justify-between h-12 text-[12px] px-4">
+		<div class="md:hidden mt-4"><i class="bi bi-telephone"></i></div>
+		<div class="flex gap-4 m-4 max-md:hidden ">
+
+			<p><i class="bi bi-telephone"></i> 020-800-456-747</p>
+			<p class="border-l pl-4">Free shiping on orders over $300</p>
+		</div>
+		<div class="flex gap-4 m-4 ">
+			<p>Language <i id="openlang" class="relative bi bi-chevron-down border-r pr-4"></i></p>
+			<div id="langoption"
+				class="hidden flex-col text-left absolute z-20  right-18 top-10 space-y-2 bg-white text-slate-500 border shadow-slate-300 h-15	">
+				<a href="./index3.html" class="py-1 pl-2 pr-14  hover:bg-fuchsia-700 hover:text-white">👸 UK ENG</a>
+				<a href="./index3.html" class="py-1 pl-2 pr-14 hover:bg-fuchsia-700 hover:text-white"> <span
+						class="text-lg">
+						🗽</span> UN ENG</a>
+			</div>
+			<p>USD <i id="openusd" class="relative bi bi-chevron-down"></i></p>
+			<div id="usdoption"
+				class="hidden flex-col text-left absolute z-20  right-2 top-10 space-y-2 py-1.5 bg-white text-slate-500 border shadow-slate-300 	">
+				<p><a href="./index3.html" class="py-2  pl-2 pr-14 hover:bg-fuchsia-700 hover:text-white">EUR</a></p>
+				<p><a href="./index3.html" class="py-2 pl-2 pr-14 hover:bg-fuchsia-700 hover:text-white">GBp</a></p>
+			</div>
+		</div>
+
+	</div>
+	<!-- navbar -->
+	<div class="flex justify-between  items-center p-4 bg-white shadow-sm text-sm ">
+		<div><img class="pl-4" src="./images/logo.png"></div>
+		<div id="navlist" class="relative text-xl text-black font-extrabold lg:hidden"> <i class=" bi bi-list"></i>
+		</div>
+		<div id="navdropdown"
+			class="max-lg:hidden lg:block max-lg:absolute z-10 top-32 right-0  flex-col gap-4 bg-white/80 max-lg:shadow-lg">
+			<a href="./index3.html" class="px-2  hover:text-fuchsia-700">CONTACT</a>
+			<a href="./index2.html" class="px-2  hover:text-fuchsia-700">KIDS</a>
+			<span class="text-lg xl:ml-96 lg:ml-60 ml-2">
+
+				<i id="" class="search bi bi-search cursor-pointer"></i>
+				<i id="" class="person px-2 bi bi-person"></i>
+				<i class="pr-4 bi bi-cart"></i>
+			</span>
+		</div>
+	</div>
+		<div  id="" class="searchArea hidden  bg-slate-50/50">
+			<div class="flex  items-center justify-center  z-[999] w-[100%] h-[100vh] fixed top-0 bg-slate-50 backdrop-blur-md ">
+
+				<form action="#" class="pb-10 max-md:w-11/12 md:w-1/2 ">
+
+					<div class="flex items-center border-b border-fuchsia-700 ">
+					  <input class=" appearance-none bg-transparent border-none w-full text-gray-700  py-3 text-2xl   focus:outline-none" type="text" placeholder="What are you looking for?" aria-label="search" required>
+					  <button class="flex-shrink-0   text-xl  text-fuchsia-700 py-1 px-2 " type="button">
+						<button><a href="./index.html"><i  class=" bi bi-search pr-4"></i></a></button>
+						<i id="" class="closeSearch bi bi-x-lg "></i>
+					  </button>
+
+					</div>
+				  </form>
+			</div>
+		</div>
+		<div  id="" class="profile hidden  bg-slate-50/50">
+			<div class="flex  items-center justify-center  z-[999] w-[100%] h-[100vh] fixed top-0 backdrop-blur-md  ">
+				<div class=" w-3/2 bg-slate-50 text-fuchsia-700 rounded tracking-wide shadow-inner text-5xl px-28 py-16"> <p>Hello! WELCOME😍</p></div>
+
+				<div class="text-xl text-white bg-fuchsia-700 border"><button type="button" class="closeProfile  p-4"><i class="bi bi-x-lg pl-1"></i></button></div>
+			</div>
+		</div>
+	<div class="p-4 float-right"><a href="./index.html" class="px-2 pt-4 hover:text-fuchsia-700"><i
+				class="bi bi-arrow-up-left-circle-fill "></i> HOME PAGE</a></div>
+	<!-- HOME&LIVING -->
+	<div class="bg-slate-50 text-black/80 tracking-wide shadow-inner text-5xl px-28 py-16">
+		<p>Home & Living</p>
+	</div>
+	<div class="flex flex-wrap justify-around  gap-4 p-4 pt-10 ">
+		<div class="relative w-[300px] overflow-hidden outline outline-offset-4"><a href="#art-n-decor"><img
+					class="w-[300px] h-[100%] object-cover transition ease-in-out hover:scale-105 duration-300 "
+					src="./images/home&living/art-n-decor.webp" alt=""></a>
+			<div class="absolute top-0 bg-amber-200 p-1">
+				<p>20% off</p>
+			</div>
+		</div>
+		<div class="w-[300px] overflow-hidden flex item-center "><a href="#bath"><img
+					class="w-[300px]  h-[100%] object-cover transition ease-in-out hover:scale-105 duration-300 "
+					src="./images/home&living/bath.webp" alt=""></a></div>
+
+		<div class="relative w-[300px] overflow-hidden flex item-center outline outline-offset-4"><a href="#bed"><img
+					class="w-[300px]  h-[100%] object-cover transition ease-in-out hover:scale-105 duration-300 "
+					src="./images/home&living/bed.webp" alt=""></a>
+			<div class="absolute top-0 bg-amber-200 p-1">
+				<p>40% off</p>
+			</div>
+		</div>
+		<div class="w-[300px] overflow-hidden flex item-center"><a href="#furnishings"><img
+					class="w-[300px]  h-[100%] object-cover transition ease-in-out hover:scale-105 duration-300 "
+					src="./images/home&living/furnishings.webp" alt=""></a></div>
+
+		<div class="w-[300px] overflow-hidden flex item-center outline outline-offset-4"><a href="#"><img
+					class="w-[300px]  h-[100%] object-cover transition ease-in-out hover:scale-105 duration-300 "
+					src="./images/home&living/kitchen.webp" alt=""></a></div>
+		<div class="w-[300px] overflow-hidden flex item-center"><a href="#"><img
+					class="w-[300px]  h-[100%] object-cover transition ease-in-out hover:scale-105 duration-300 "
+					src="./images/home&living/lamps.webp"></a></div>
+
+	</div>
+	<!-- art-n-decor -->
+	<p class="text-xl text-center pt-24 font-light text-slate-600">TOP FOR THIS MONTH</p>
+	<p class="text-3xl text-center pb-10 pt-1 font-bold">OUR FEATURED PICKS</p>
+	<div id="art-n-decor" class="flex gap-4 p-4 pt-10 w-full">
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/art&decor/Canon-Showpiece.webp"
+					alt="">
+					<div class="p-4 bg-slate-200">
+				<p>Canon-Showpiece</p>
+				<p>4.5 <i class="bi bi-star-fill"></i></p></div>
+			</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$70</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/art&decor/myganesha.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>Ganesha</p>
+				<p>5 <i class="bi bi-star-fill"></i></p></div></a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$150</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/art&decor/photoFrames1.webp"
+					alt="">
+					<div class="p-4 bg-slate-200">
+						<p>PhotoFrames</p>
+						<p>3.5 <i class="bi bi-star-fill"></i></p></div>
+				</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$100</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/art&decor/WallDecor1.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>WallDecor</p>
+				<p>3 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$50</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/art&decor/Windchime.jpg" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>Windchime</p>
+				<p>4.5 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$130</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+	</div>
+	<!-- BATH -->
+	<div id="bath" class="flex gap-4 p-4 pt-10 w-full">
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bath/BathRobe.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>BathRobe</p>
+				<p>4.5 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$200</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bath/BathRobe1.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>BathRobe</p>
+				<p>2.5 <i class="bi bi-star-fill"></i></p></div>
+			</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$150</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bath/HandTowels1.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>HandTowels</p>
+				<p>4.5 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$100</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bath/pureCottonBathTowels1.webp"
+					alt="">
+					<div class="p-4 bg-slate-200">
+						<p>PureCottonBathTowels</p>
+						<p>5 <i class="bi bi-star-fill"></i></p></div>
+				</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$600</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<!-- BED LINEN -->
+	<div id="bed" class="flex gap-4 p-4 pt-10 w-full">
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bed/BlueBedsheets1.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>BlueBedsheets</p>
+				<p>5 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$800</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bed/DoubleBedDohar1.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>DoubleBedDohar</p>
+				<p>4.5 <i class="bi bi-star-fill"></i></p></div>
+			</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$950</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bed/GreenPinkFloral.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>GreenPinkFloral</p>
+				<p>4 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$600</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/bed/PinkBedsheets1.webp"
+					alt="">
+					<div class="p-4 bg-slate-200">
+						<p>PinkBedsheets</p>
+						<p>5 <i class="bi bi-star-fill"></i></p></div>
+				</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$1000</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<!-- furnishings -->
+	<div id="furnishings" class="flex gap-4 p-4 pt-10 w-full">
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/furnishings/1.webp"
+					alt="">
+					<div class="p-4 bg-slate-200">
+				<p>DiwanSet</p>
+				<p>4.5 <i class="bi bi-star-fill"></i></p></div>
+			</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$70</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/furnishings/2.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>DiwanSet</p>
+				<p>5 <i class="bi bi-star-fill"></i></p></div></a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$150</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/furnishings/3.webp"
+					alt="">
+					<div class="p-4 bg-slate-200">
+						<p>DiwanSet</p>
+						<p>3.5 <i class="bi bi-star-fill"></i></p></div>
+				</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$100</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/furnishings/4.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>SofaSet</p>
+				<p>3 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$50</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+		<div class="relative w-[300px]"><a href=""><img src="./images/home&living/furnishings/5.webp" alt="">
+			<div class="p-4 bg-slate-200">
+				<p>DiwanSet</p>
+				<p>3 <i class="bi bi-star-fill"></i></p></div>
+		</a>
+			<div class="absolute top-0 right-0 p-4 flex flex-col  bg-white/80 items-center gap-4 shadow-inner">
+				<p>$50</p>
+				<a href="#">
+					<p><i class="bi bi-cart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+				<a href="#">
+					<p><i class="bi bi-heart-fill hover:text-fuchsia-700"></i></p>
+				</a>
+			</div>
+		</div>
+
+		</div>
+	</div>
+
+</body>
+
+</html>
