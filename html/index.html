@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="../dist/output.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@200;300;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,300;1,400;1,500;1,700&display=swap"
+			rel="stylesheet">
+		<script src="./js/script.js" defer></script>
+		<title>E-commerce</title>
+	</head>
+
+	<body class="font-family: 'Encode Sans', sans-serif;
+font-family: 'Roboto', sans-serif;">
+		<!-- header section -->
+		<!-- top nav -->
+		<div class="bg-black text-slate-300 flex justify-between h-12 text-[12px] px-4">
+			<div class="md:hidden mt-4"><i class="bi bi-telephone"></i></div>
+			<div class="flex gap-4 m-4 max-md:hidden ">
+
+				<p><i class="bi bi-telephone"></i> 020-800-456-747</p>
+				<p class="border-l pl-4">Free shipping on orders over $300</p>
+			</div>
+			<div class="flex gap-4 m-4 ">
+				<p>Language <i id="openlang" class="relative bi bi-chevron-down border-r pr-4"></i></p>
+				<div id="langoption"
+					class="hidden flex-col text-left absolute z-20  right-18 top-10 space-y-2 bg-white text-slate-500 border shadow-slate-300 h-15	">
+					<a href="./index.html" class="py-1 pl-2 pr-14  hover:bg-fuchsia-700 hover:text-white">👸 UK ENG</a>
+					<a href="./index.html" class="py-1 pl-2 pr-14 hover:bg-fuchsia-700 hover:text-white"> <span
+							class="text-lg">
+							🗽</span> UN ENG</a>
+				</div>
+				<p>USD <i id="openusd" class="relative bi bi-chevron-down"></i></p>
+				<div id="usdoption"
+					class="hidden flex-col text-left absolute z-20  right-2 top-10 space-y-2 py-1.5 bg-white text-slate-500 border shadow-slate-300 	">
+					<p><a href="./index.html" class="py-2  pl-2 pr-14 hover:bg-fuchsia-700 hover:text-white">EUR</a></p>
+					<P><a href="./index.html" class="py-2 pl-2 pr-14 hover:bg-fuchsia-700 hover:text-white">GBP</a></P>
+				</div>
+			</div>
+
+		</div>
+		<!-- navbar -->
+		<div class="flex justify-between  items-center p-4 bg-white shadow-sm text-sm ">
+			<div><img class="pl-4" src="../images/logo.png"></div>
+			<div id="navlist" class="relative text-xl text-black font-extrabold lg:hidden"> <i class=" bi bi-list"></i>
+			</div>
+			<div id="navdropdown"
+				class="max-lg:hidden lg:block max-lg:absolute z-10 top-32 right-0  flex-col gap-4 bg-white/80 max-lg:shadow-lg">
+				<a href="#women" class="px-2 pt-4 hover:text-fuchsia-700">WOMEN</a>
+				<a href="#men" class="px-2  hover:text-fuchsia-700">MEN</a>
+				<a href="./index2.html" class="px-2  hover:text-fuchsia-700">KIDS</a>
+				<a href="./index4.html" class="px-2  hover:text-fuchsia-700">HOME & LIVING</a>
+				<a href="#blog" class="px-2  hover:text-fuchsia-700">BLOG</a>
+				<a href="./index3.html" class="px-2  hover:text-fuchsia-700">CONTACT</a>
+				<span class="text-lg xl:ml-96 lg:ml-60 ml-2">
+					<i class="search bi bi-search cursor-pointer"></i>
+
+					<i id="" class="person px-2 bi bi-person cursor-pointer"></i>
+					<a class="relative" href="./index5.html"><i class="mr-4 bi bi-cart cursor-pointer"></i>
+					<span id="cartCount" class="absolute -top-2 left-2 px-[5px] rounded-full bg-fuchsia-700 text-white text-sm">1</span></a>
+				</span>
+
+			</div>
+
+
+		</div>
+
+
+		<div id="" class="searchArea hidden  bg-slate-50/50">
+			<div
+				class="flex  items-center justify-center  z-[999] w-[100%] h-[100vh] fixed top-0 bg-slate-50 backdrop-blur-md ">
+
+				<form action="#" class="pb-10 max-md:w-11/12 md:w-1/2 ">
+
+					<div class="flex items-center border-b border-fuchsia-700 ">
+						<input
+							class=" appearance-none bg-transparent border-none w-full text-gray-700  py-3 text-2xl   focus:outline-none"
+							name="" type="text" placeholder="What are you looking for?" aria-label="search" required>
+						<button class="flex-shrink-0   text-xl  text-fuchsia-700 py-1 px-2 " name="" type="button">
+							<button><a href="./index.html"><i class=" bi bi-search pr-4"></i></a></button>
+							<i id="" class="closeSearch bi bi-x-lg "></i>
+						</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="" class="profile hidden ">
+
+			<div
+				class=" flex items-center justify-center  z-[999] w-[100%] h-[100vh] fixed top-0 backdrop-sepia-0 bg-black/70 ">
+				<!-- sing up sing in form -->
+				<div id="login" class="relative md:w-1/3 h-full top-28">
+					<form action="" name="formFill" onsubmit="return validation()"
+						class="flex flex-col bg-white p-4 border border-fuchsia-700 shadow-inner ">
+						<img class="w-1/2 self-center py-4" src="../images/logo.png">
+						<p id="result" class="text-red-500 pl-1  text-sm font-bold"></p>
+						<input class="text-sm outline-none border-b my-4 bg-transparent px-1 text-black/70"
+							name="userName" type="text" placeholder="Name">
+						<input class="text-sm outline-none border-b my-4 bg-transparent px-1 text-black/70" name="Email"
+							type="email" placeholder="Email">
+						<input class="text-sm outline-none border-b my-4 bg-transparent px-1 text-black/70"
+							name="Password" type="password" placeholder="Password">
+						<input class="text-sm outline-none border-b my-4 bg-transparent px-1 text-black/70"
+							name="CPassword" type="password" placeholder="Confirm Password">
+						<input type="submit" name="submit"
+							class="w-1/2 self-center bg-fuchsia-700 text-sm hover:bg-fuchsia-800 text-white p-2 rounded my-4 cursor-pointer"
+							onclick="validation()" value="Sign-In">
+						<div class="text-fuchsia-700 text-sm flex justify-between"><a class="hover:underline"
+								href="#">Forget-Password</a>
+							<p class="hover:underline cursor-pointer" onclick="openLogin()">Login</p>
+						</div>
+					</form>
+				</div>
+				<div id="loginForm" class="absolute top-28 hidden md:w-1/3 h-full">
+					<form action="" name="lformFill" onsubmit="return validation2()"
+						class="flex flex-col bg-white p-4 border border-fuchsia-700 shadow-inner ">
+						<img class="w-1/2 self-center py-4" src="../images/logo.png">
+						<p id="lresult" class="text-red-500 pl-1  text-sm font-bold"></p>
+
+						<input class="text-sm outline-none border-b my-4 bg-transparent px-1 text-black/70"
+							name="lEmail" type="email" placeholder="Email">
+						<input class="text-sm outline-none border-b my-4 bg-transparent px-1 text-black/70"
+							name="lPassword" type="password" placeholder="Password">
+
+						<input type="submit"
+							class="w-1/2 self-center bg-fuchsia-700 text-sm hover:bg-fuchsia-800 text-white p-2 rounded my-4 cursor-pointer"
+							onclick="validation2()" value="Sign-Up">
+
+					</form>
+				</div>
+
+				<div id="welcome" class=" hidden">
+					<div class="flex">
+						<p
+							class="w-3/2 bg-slate-50 text-fuchsia-700 rounded tracking-wide shadow-inner max-md:text-3xl md:text-5xl max-md:mx-1 max-md:px-2 md:px-28 py-16">
+							Hello! WELCOME <span class="userName"></span> 😍</p>
+						<div class="text-xl "><button name="" type="button"
+								class="closeProfile rounded text-white bg-fuchsia-700 border p-4"><i
+									class="bi bi-x-lg pl-1"></i></button></div>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+		<!-- hero section -->
+
+		<div id="slider" class="relative z-2">
+			<img class="object-cover align-self: center w-[100%] max-lg:h[400px] lg:h-[500px]" src="../images/img 1.jpg">
+		</div>
+		<div
+			class="absolute md:top-80 max-lg:top-56 max-lg:right-0 max-lg:left-0 lg:top-80 lg:right-0 lg:left-0 px-4 flex">
+			<button onclick="back()"><i
+					class="bi bi-chevron-left lg:mr-40 text-2xl font-extrabold bg-white"></i></button>
+			<div class="lg:ml-96 max-sm:p-1 md:p-4 max-lg:text-center bg-white/70">
+				<p class="max-lg:text-4xl lg:text-5xl">Best fits for our loveable!</p>
+
+				<span class="max-md:hidden"><br>Lorem, ipsum dolor sit amet consectetur adipisicing sonehi elit.
+					Nostrum ipsa autem assumenda cumque. Pariatur golith,
+					excepturi sapiente. Rem id, quidem, dolores suscipit aut,
+					vitae tempore numquam nam accusantium ducimus
+					alias modie!</span>
+			</div>
+
+			<button onclick="next()"><i class="bi bi-chevron-right text-2xl font-extrabold bg-white"></i></button>
+
+		</div>
+		<!-- middle part1 -->
+		<div>
+			<p class="text-xl text-center pt-24 font-light text-slate-600">TOP FOR THIS MONTH</p>
+			<p class="text-3xl text-center pb-10 pt-1 font-bold">OUR FEATURED PICKS</p>
+			<div class="flex flex-wrap justify-center item-center max-sm:gap-2 lg:gap-8 text-lg ">
+				<div class="w-[300px] overflow-hidden"><a href="#">
+						<div class="w-[300px] h-[200px] bg-cover pt-36 p-4 transition ease-in-out hover:scale-105 duration-300"
+							style="background-image: url('../images/img\ 4.jpg');">
+							<p class="font-extrabold">Men's</p>
+							<p class="font-light">New Collection</p>
+						</div>
+					</a></div>
+				<div class="w-[300px] overflow-hidden"><a href="#">
+						<div class="w-[300px] h-[200px] bg-cover pt-36 p-4 transition ease-in-out hover:scale-105 duration-300 "
+							style="background-image: url('../images/img\ 2.jpg');">
+							<p class="font-extrabold">Women's</p>
+							<p class="font-light">New Collection</p>
+						</div>
+					</a></div>
+				<div class="w-[300px] overflow-hidden"><a href="#">
+						<div class="w-[300px] h-[200px] bg-cover pt-36 p-4 transition ease-in-out hover:scale-105 duration-300"
+							style="background-image: url('../images/img\ 5.jpg');">
+							<p class="font-extrabold">Accessories</p>
+							<p class="font-light">Sale of 20%</p>
+						</div>
+					</a></div>
+			</div>
+		</div>
+		<!-- middle part2 -->
+		<div id="women" class="flex flex-col justify-center bg-slate-50 pt-20 pb-28 mt-24  ">
+			<p class="text-xl text-center font-light text-slate-600">AUTUMN CHOICE</p>
+			<p class="text-3xl text-center pb-10 pt-1 font-bold">WOMEN COLLECTION</p>
+			<div class="flex  max-lg:flex-wrap  gap-2 justify-center overflow-hidden ">
+
+				<div class="relative group">
+					<div class="relative"><img class=" w-[200px] h-[100%]  group-hover:opacity-20"
+							src="../images/autumn cloth 1.webp">
+
+						<!-- for full screen view -->
+						<div class="absolute fullview1 hidden top-20 ">
+							<div
+								class="flex p-4 border items-center justify-center w-1/2 fixed top-10 z-10 border-fuchsia-700 bg-slate-50 rounded tracking-wide shadow-inner text-lg leading-10 px-4 py-16  gap-4 ">
+								<div class="basis-full ">
+									<img src="../images/autumn cloth 1.webp">
+
+
+								</div>
+								<div class="basis-full ">
+									<p class="p-2 bg-fuchsia-700 text-white inline-block">On Sale!</p>
+									<p class="text-black/80 pt-4">$3300 <span class="line-through text-slate-400">
+											$4000</span></p>
+									<p class="leading-8 py-4 ">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Sapiente nihil recusandae sunt repudiandae id distinctio expedita
+										magni architecto!</p>
+									<p class="text-black/80">4.5⭐</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3 flex justify-between gap-4">
+						<div onclick="addtocart()" class="cartadd p-1 border border-slate-400 text-slate-500" href="#">
+							<i class="bi bi-cart-fill cursor-pointer "></i>
+						</div>
+						<a class=" p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class=" p-1 border border-slate-400 text-slate-500"><i
+								class=" bi bi-arrows-fullscreen fullview1btn">
+							</i></a>
+
+
+
+					</div>
+
+				</div>
+				<div class="relative  group">
+					<div class="relative"><img class=" w-[200px] h-[100%] group-hover:opacity-20"
+							src="../images/autumn cloth 2.webp">
+						<!-- for full screen view -->
+						<div class="absolute fullview2 hidden ">
+							<div
+								class="flex p-4 border items-center justify-center w-1/2 fixed top-10 z-10 border-fuchsia-700 bg-slate-50 rounded tracking-wide shadow-inner text-lg leading-10 px-4 py-16  gap-4 ">
+								<div class="basis-full ">
+									<img src="../images/autumn cloth 2.webp">
+
+								</div>
+								<div class="basis-full ">
+									<p class="p-2 bg-fuchsia-700 text-white inline-block">On Sale!</p>
+									<p class="text-black/80 pt-4">$3300 <span class="line-through text-slate-400">
+											$4000</span></p>
+									<p class="leading-8 py-4 ">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Sapiente nihil recusandae sunt repudiandae id distinctio expedita
+										magni architecto!</p>
+									<p class="text-black/80">4.5⭐</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute opacity-0 group-hover:opacity-100 top-32  left-3 flex justify-between gap-4">
+						<div onclick="addtocart()" class=" cartadd p-1 border border-slate-400 text-slate-500"
+							href="#"><i class="bi bi-cart-fill cursor-pointer "></i></div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class="p-1 border border-slate-400 text-slate-500"><i
+								class="bi bi-arrows-fullscreen fullview2btn"></i></a>
+					</div>
+				</div>
+				<div class="relative group">
+					<div class="relative"><img class=" w-[200px] h-[100%]  group-hover:opacity-20"
+							src="../images/autumn cloth 3.webp">
+						<!-- for full screen view -->
+						<div class="absolute fullview3 hidden top-20 ">
+							<div
+								class="flex p-4 border items-center justify-center w-1/2 fixed top-10 z-10 border-fuchsia-700 bg-slate-50 rounded tracking-wide shadow-inner text-lg leading-10 px-4 py-16  gap-4 ">
+								<div class="basis-full ">
+									<img src="../images/autumn cloth 3.webp">
+
+								</div>
+								<div class="basis-full ">
+									<p class="p-2 bg-fuchsia-700 text-white inline-block">On Sale!</p>
+									<p class="text-black/80 pt-4">$3300 <span class="line-through text-slate-400">
+											$4000</span></p>
+									<p class="leading-8 py-4 ">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Sapiente nihil recusandae sunt repudiandae id distinctio expedita
+										magni architecto!</p>
+									<p class="text-black/80">4.5⭐</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3  flex justify-between gap-4 ">
+						<div onclick="addtocart()" class="cartadd p-1 border border-slate-400 text-slate-500"
+							href="# "><i class="bi bi-cart-fill cursor-pointer "></i></div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class="p-1 border border-slate-400 text-slate-500"><i
+								class="bi bi-arrows-fullscreen fullview3btn"></i></a>
+					</div>
+				</div>
+				<div class="relative group">
+					<div class="relative"><img class=" w-[200px] h-[100%]  group-hover:opacity-20"
+							src="../images/autumn cloth 4.webp">
+						<!-- for full screen view -->
+						<div class="absolute fullview4 hidden -left-[120%] top-[0px]  ">
+							<div
+								class="flex p-4 border items-center justify-center w-1/2 fixed top-10 z-10 border-fuchsia-700 bg-slate-50 rounded tracking-wide shadow-inner text-lg leading-10 px-4 py-16  gap-4 ">
+								<div class="basis-full ">
+									<img src="../images/autumn cloth 4.webp">
+
+								</div>
+								<div class="basis-full ">
+									<p class="p-2 bg-fuchsia-700 text-white inline-block">On Sale!</p>
+									<p class="text-black/80 pt-4">$3300 <span class="line-through text-slate-400">
+											$4000</span></p>
+									<p class="leading-8 py-4 ">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Sapiente nihil recusandae sunt repudiandae id distinctio expedita
+										magni architecto!</p>
+									<p class="text-black/80">4.5⭐</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3  flex justify-between gap-4">
+						<div onclick="addtocart()" href=# class="p-1 border border-slate-400 text-slate-500 cartadd"><i
+								class="bi bi-cart-fill cursor-pointer "></i></div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class="p-1 border border-slate-400 text-slate-500"><i
+								class="bi bi-arrows-fullscreen fullview4btn"></i></a>
+					</div>
+				</div>
+				<div class="relative group">
+					<div class="relative"><img class=" w-[200px] h-[100%]  group-hover:opacity-20"
+							src="../images/autumn cloth 7.webp">
+						<!-- for full screen view -->
+						<div class="absolute -left-[170%] top-[0px] fullview5 hidden ">
+							<div
+								class="flex p-4 border items-center justify-center w-1/2 fixed top-10 z-10 border-fuchsia-700 bg-slate-50 rounded tracking-wide shadow-inner text-lg leading-10 px-4 py-16  gap-4 ">
+								<div class="basis-full ">
+									<img src="../images/autumn cloth 7.webp">
+
+								</div>
+								<div class="basis-full ">
+									<p class="p-2 bg-fuchsia-700 text-white inline-block">On Sale!</p>
+									<p class="text-black/80 pt-4">$3300 <span class="line-through text-slate-400">
+											$4000</span></p>
+									<p class="leading-8 py-4 ">Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Sapiente nihil recusandae sunt repudiandae id distinctio expedita
+										magni architecto!</p>
+									<p class="text-black/80">4.5⭐</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3  flex justify-between gap-4">
+						<div onclick="addtocart()" href="#" class="p-1 border border-slate-400 text-slate-500 cartadd">
+							<i class="bi bi-cart-fill cursor-pointer "></i>
+						</div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class="p-1 border border-slate-400 text-slate-500"><i
+								class="bi bi-arrows-fullscreen fullview5btn"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- cart add alert -->
+		<div class="hidden addMsg">
+			<div class="flex items-center justify-center  z-[999] w-[100%] h-[100vh] fixed top-0  ">
+				<div
+					class=" w-1/2 text-center bg-lime-600 text-white rounded tracking-wide shadow-inner text-3xl md:px-28 py-16">
+					<i class="bi bi-check2-circle text-5xl"></i>
+					<p>This item is adeed to your cart.</p>
+				</div>
+
+				<div class="text-xl text-white bg-fuchsia-700 border"><button name="" type="button"
+						class="closeAddMsg  p-4"><i class="bi bi-x-lg pl-1"></i></button></div>
+
+			</div>
+		</div>
+
+		<!-- middle part3 -->
+		<div class="w-full h-[400px] bg-cover text-white pt-28 pl-20"
+			style="background-image: url('../images/guy-dark-bg.jpg');">
+			<p class="text-3xl font-light">Old Collection</p>
+			<p class="text-5xl font-bold my-2">HUGE SALES</p>
+			<p class="text-3xl font-light">At our outlet stores</p>
+			<button name="" type="button"
+				class="px-10 py-2 mt-6 text-sm font-light rounded-2xl text-white bg-fuchsia-700 hover:bg-fuchsia-800">Shop
+				Now <i class="bi bi-bag-check"></i></button>
+		</div>
+		<div onclick="topFunction()" id="topbtn"
+			class="fixed z-[999] bottom-4 hidden right-4 text-fuchsia-700 text-3xl"><i
+				class="bi bi-arrow-up-square-fill"></i></div>
+		<!-- middle part4 -->
+		<div id="men">
+			<p class="text-xl text-center  pt-20 font-light text-slate-600">MAN'S TIME</p>
+			<p class="text-3xl text-center pb-10 pt-1 font-bold">MEN COLLECTION</p>
+			<div class="flex max-lg:flex-wrap gap-2 justify-center overflow-hidden ">
+
+				<div class="relative group">
+					<img class=" w-[200px] h-[100%]  group-hover:opacity-20" src="../images/MEN1.webp">
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3 flex justify-between gap-4">
+						<div onclick="addtocart()" class=" cartadd p-1 border border-slate-400 text-slate-500"
+							href="#"><i class="bi bi-cart-fill cursor-pointer "></i></div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class="p-1 border border-slate-400 text-slate-500" href="#"><i
+								class="bi bi-arrows-fullscreen"></i></a>
+					</div>
+				</div>
+				<div class="relative  group">
+					<img class=" w-[200px] h-[100%] group-hover:opacity-20" src="../images/MEN2.webp">
+					<div class="absolute opacity-0 group-hover:opacity-100 top-32  left-3 flex justify-between gap-4">
+						<div onclick="addtocart()" class="p-1 border border-slate-400 text-slate-500 cartadd" href="#">
+							<i class="bi bi-cart-fill cursor-pointer "></i>
+						</div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class="p-1 border border-slate-400 text-slate-500" href="#"><i
+								class="bi bi-arrows-fullscreen"></i></a>
+					</div>
+				</div>
+				<div class="relative group">
+					<img class=" w-[200px] h-[100%]  group-hover:opacity-20" src="../images/MEN3.webp">
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3  flex justify-between gap-4 ">
+						<div onclick="addtocart()" class="p-1 border border-slate-400 text-slate-500 cartadd" href="#">
+							<i class="bi bi-cart-fill cursor-pointer "></i>
+						</div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a class="p-1 border border-slate-400 text-slate-500" href="#"><i
+								class="bi bi-arrows-fullscreen"></i></a>
+					</div>
+				</div>
+				<div class="relative group">
+					<img class=" w-[200px] h-[100%]  group-hover:opacity-20" src="../images/MEN4.webp">
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3  flex justify-between gap-4">
+						<div onclick="addtocart()" href=# class="p-1 border border-slate-400 text-slate-500 cartadd"><i
+								class="bi bi-cart-fill cursor-pointer "></i></div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a href="#" class="p-1 border border-slate-400 text-slate-500"><i
+								class="bi bi-arrows-fullscreen "></i></a>
+					</div>
+				</div>
+				<div class="relative group">
+					<img class=" w-[200px] h-[100%]  group-hover:opacity-20" src="../images/MEN5.webp">
+					<div class="absolute opacity-0 group-hover:opacity-100  top-32 left-3  flex justify-between gap-4">
+						<div onclick="addtocart()" href=# class="p-1 border border-slate-400 text-slate-500 cartadd"><i
+								class="bi bi-cart-fill cursor-pointer "></i></div>
+						<a class="p-1 px-6 text-sm text-white border border-fuchsia-700 bg-fuchsia-700" href="#"><i
+								class=" bi bi-search"></i> View </a>
+						<a href="#" class="p-1 border border-slate-400 text-slate-500"><i
+								class="bi bi-arrows-fullscreen "></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- middle part5 -->
+		<div id="blog" class="flex flex-col  justify-center bg-slate-50 pt-20 pb-28 mt-16  ">
+			<p class="text-xl text-center font-light text-slate-600">MADE IT HARD WAY</p>
+			<p class="text-3xl text-center pb-10 pt-1 font-bold">LATEST FROM THE BLOG</p>
+			<div class="flex max-md:flex-wrap gap-8 justify-center lg:mx-20 max-lg:mx-4">
+				<div class="flex max-md:flex-col justify-center">
+
+					<div>
+						<img class="object-cover w-full h-full" src="../images/cap-2923682_960_720.jpg">
+					</div>
+					<div class="bg-white p-4 lg:mr-10 flex flex-col justify-between">
+						<div>
+							<p class="font-bold">Newest session fits</p>
+							<p class="font-light text-[12px] text-slate-500"><i class="bi bi-clock"></i> April 18th 2023
+							</p>
+						</div>
+						<p class="font-light text-[12px] text-slate-500  ">Lorem, ipsum dolor sit amet consectetur
+							adipisicing elit. Voluptates tempore sequi impedit quo rerum
+							consequatur repellendus magnam aliquam eaque? Omnis praesentium, deserunt possimus excepturi
+							qui
+							laborum! Vitae quas sunt officia.</p>
+						<div class=" group  relative">
+							<a class="text-fuchsia-700 " href="#"> READ MORE
+								<div class="absolute  top-0 left-24  group-hover:translate-x-1/2 "><i
+										class="bi bi-arrow-right group-hover:opacity-0 delay-75 ease-linear"></i></div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+				<div class="flex max-md:flex-col justify-center">
+
+					<div>
+						<img class="object-cover w-full h-full" src="../images/child happy.jpg">
+					</div>
+					<div class="bg-white p-4 lg:mr-10 flex flex-col justify-between">
+						<div>
+							<p class="font-bold">Newest session fits</p>
+							<p class="font-light text-[12px] text-slate-500"><i class="bi bi-clock"></i> April 15th 2023
+							</p>
+						</div>
+						<p class="font-light text-[12px] text-slate-500 py-10 ">Ipsum dolor sit amet consectetur
+							adipisicing elit. Voluptates tempore sequi impedit quo rerum
+							consequatur repellendus magnam aliquam eaque? Omnis praesentium, deserunt possimus excepturi
+							qui
+							laborum! Vitae quas sunt officia.</p>
+						<div class=" group  relative">
+							<a class="text-fuchsia-700 " href="#"> READ MORE
+								<div class="absolute  top-0 left-24  group-hover:translate-x-1/2 "><i
+										class="bi bi-arrow-right group-hover:opacity-0 delay-75 ease-linear"></i></div>
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- middle part6 -->
+		<div class=" container m-auto w-full h-[140px] p-4 lg:px-28 bg-white overflow-hidden">
+			<div
+				class="flex max-md:flex-wrap max-md:gap-4 h-[140px] overflow-x-auto overflow-y-hidden lg:justify-around max-lg:justify-center">
+				<!-- <img class="mx-4 pl-4 " src="../images/logos/brand-1.svg" alt=""> -->
+				<img id="imgs1" class=" object-scale-down h-28 lg:w-60 max-md:w-27 " src="../images/logos/brand-2.svg"
+					alt="">
+				<img id="imgs2" class=" imgs1 object-scale-down h-28 lg:w-60  max-md:w-27 "
+					src="../images/logos/brand-3.svg" alt="">
+				<img class=" object-scale-down h-28 lg:w-60  max-md:w-27  " src="../images/logos/brand-4.svg" alt="">
+				<img class=" object-scale-down h-28 lg:w-60  max-md:w-27  " src="../images/logos/brand-5.svg" alt="">
+				<img class=" object-scale-down h-28 lg:w-60  max-md:w-27  " src="../images/logos/brand-1.svg" alt="">
+				<img id="imgs3" class="hidden object-scale-down h-28 lg:w-60 max-md:w-27 "
+					src="../images/logos/brand-3.svg" alt="">
+
+				<img id="imgs4" class="hidden object-scale-down h-28 lg:w-60 max-md:w-27  "
+					src="../images/logos/brand-2.svg" alt="">
+			</div>
+
+		</div>
+		<div class=" flex justify-center text-slate-500 text-[3rem]">
+			<button id="left"><i class="bi bi-dot"></i></button>
+			<button id="right" class="text-fuchsia-700"><i class="bi bi-dot "></i></button>
+		</div>
+		<!-- footer -->
+		<div class="text-white">
+			<!-- service block -->
+			<div class=" flex max-lg:flex-col justify-center item-center bg-black/90  py-[50px] mx-auto">
+				<div class="group  flex justify-center lg:border-r lg:pr-20 mx-2">
+					<div class="text-4xl h-auto item-center mx-2 mt-1 group-hover:text-fuchsia-700"><i
+							class="bi bi-truck"></i></div>
+					<div>
+						<p class="uppercase">Free shipping & return</p>
+						<span class="font-light text-sm text-white/70">Free Shipping over $300</span>
+					</div>
+				</div>
+				<div class="group  flex justify-center lg:border-r lg:px-20  max-lg:py-10 ">
+					<div class="text-4xl h-auto item-center mx-2 mt-1 group-hover:text-fuchsia-700"><i
+							class="bi bi-coin"></i></div>
+					<div>
+						<p class="uppercase">Money back guarantee</p>
+						<span class="font-light text-sm text-white/70">30 Days Money Back Guarantee</span>
+					</div>
+				</div>
+				<div class=" group flex justify-center lg:pl-20 ">
+					<div class="text-4xl h-auto item-center mx-2 mt-1 group-hover:text-fuchsia-700"><i
+							class="bi bi-headset"></i></div>
+					<div>
+						<p class="uppercase">020-800-456-747</p>
+						<span class="font-light text-sm text-white/70">24/7 Available Support</span>
+					</div>
+				</div>
+			</div>
+			<!-- footer-main -->
+			<div class="bg-black/95 py-[50px] lg:px-28 flex max-md:flex-col max-lg:px-4  max-md:gap-8 gap-4">
+				<div class=" basis-1/2 container mx-auto flex flex-col gap-4 mr-8">
+					<div><img class="" src="../images/logo-white.png"></div>
+					<div class="font-light text-sm text-white/70">Lorem ipsum dolor sit amet consectetur adipisicing
+						elit.
+					</div>
+					<div class="flex gap-4 font-light text-sm text-white/70">
+						<a href="https://github.com/gunjansharma-web"><i
+								class="bi bi-github hover:text-fuchsia-700"></i></a>
+						<a href="https://www.linkedin.com/in/gunjansharma-web/"><i
+								class="bi bi-linkedin hover:text-fuchsia-700"></i></a>
+						<a href="https://www.behance.net/gunjansha"><i
+								class="bi bi-behance hover:text-fuchsia-700"></i></a>
+					</div>
+				</div>
+				<div class="basis-1/4 container mx-auto flex flex-col gap-4 px-auto ">
+					<div>
+						<p class="text-lg ">SHOP</p>
+					</div>
+					<div class="flex flex-col font-light text-sm text-white/70 gap-2 ">
+						<a href="#">
+							<p class="hover:text-fuchsia-700">For Women</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">For Men</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Stores</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Our Blog</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Shop</p>
+						</a>
+					</div>
+
+				</div>
+				<div class="basis-1/4 container mx-auto flex flex-col gap-4">
+					<div>
+						<p class="text-lg">COMPANY</p>
+					</div>
+					<div class="flex flex-col font-light text-sm text-white/70 gap-2">
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Login</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Register</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Wishlist</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Our Products</p>
+						</a>
+						<a href="#">
+							<p class="hover:text-fuchsia-700">Checkouts</p>
+						</a>
+					</div>
+
+				</div>
+				<div class="basis-1/2  container mx-auto flex flex-col gap-4">
+					<div>
+						<p class="text-lg uppercase">daily offers & discounts</p>
+					</div>
+					<div class="font-light text-sm text-white/70">Lorem consectetur adipisicing ipsum dolor sit amet
+						consectetur adipisicing elit.
+					</div>
+					<div class="font-light text-sm text-white/70 mt-4">
+						<form
+							class="bg-black/95 px-4 py-2 border hover:border-fuchsia-700 active:border-fuchsia-700 flex justify-between">
+							<input class="bg-black/95 outline-0" name="" type="email" placeholder="Your Email Address">
+							<button><i class="bi bi-send-fill hover:text-fuchsia-700"></i></button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+			<!-- footer end -->
+			<div
+				class="bg-black flex max-md:flex-col max-md:px-4 gap-4 justify-around py-[30px] font-light text-sm text-white/70 ">
+				<div><i class="bi bi-c-circle"></i>2023<a class=" no-underline hover:text-fuchsia-700 hover:underline"
+						href="./docs/Gunjan Sharma.pdf" target="_blank">GunjanSharma</a> All rights reserved.</div>
+				<div><img src="../images/payment-method_69e7ec.svg"></div>
+			</div>
+
+		</div>
+
+
+	</body>
+
+	</html>
