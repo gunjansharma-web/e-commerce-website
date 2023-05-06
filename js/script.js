@@ -150,11 +150,11 @@ let slider = document.querySelector("#slider img");
 
 console.log(slider);
 let images = [
-  "./images/img 1.jpg",
-  "./images/img 2.jpg",
-  "./images/img 3.jpg",
-  "./images/img 4.jpg",
-  "./images/img 5.jpg",
+  "../images/img 1.jpg",
+  "../images/img 2.jpg",
+  "../images/img 3.jpg",
+  "../images/img 4.jpg",
+  "../images/img 5.jpg",
 ];
 
 let num = 0;
